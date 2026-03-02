@@ -1,3 +1,7 @@
+#钉钉配置
+dingtalk:
+  appkey: dingtnvsfy9y8038t7sw
+  appsecret: gFwsicGgUE2Ox-hbqjBN-daN_I_QW-XMV2ZCQe0sPhN2M-VM5CRH8R5OQqnD0AzT
 # 项目相关配置
 ruoyi:
   # 名称

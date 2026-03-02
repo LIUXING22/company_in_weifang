@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.system.mapper.AttendanceRecordMapper">
+
+    <resultMap type="AttendanceRecord" id="AttendanceRecordResult">
+        <id property="id" column="id"/>
+        <result property="userId" column="user_id"/>
+        <result property="columnId" column="column_id"/>
+        <result property="statDate" column="stat_date"/>
+        <result property="columnValue" column="column_value"/>
+    </resultMap>
+
+    <insert id="insert" parameterType="AttendanceRecord">
+        insert into attendance_record (user_id, column_id, stat_date, column_value, create_time)
+        values (#{userId}, #{columnId}, #{statDate}, #{columnValue}, sysdate())
+    </insert>
+
+    <select id="selectByUnique" resultMap="AttendanceRecordResult">
+        select * from attendance_record
+        where user_id = #{userId} and column_id = #{columnId} and stat_date = #{statDate}
+    </select>
+
+</mapper>

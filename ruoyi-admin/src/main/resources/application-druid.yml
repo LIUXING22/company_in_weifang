@@ -1,16 +1,18 @@
 # 数据源配置
 spring:
+    dingtalk:
+        corpid: dingtnsvsfy9y8038t7sw
+        corpsecret: gFwsicGgUE20x
     datasource:
-        dingtalk:
-            appkey: your_appkey
-            appsecret: your_appsecret
         type: com.alibaba.druid.pool.DruidDataSource
         driverClassName: com.mysql.cj.jdbc.Driver
         druid:
             # 主库数据源
             master:
+                #url: jdbc:mysql://192.168.3.60:3306/ry-vue?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
                 url: jdbc:mysql://localhost:3306/ry-vue?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
                 username: root
+                #password: etoak
                 password: 12345
             # 从库数据源
             slave:
