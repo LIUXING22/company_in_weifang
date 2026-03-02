@@ -3,12 +3,15 @@ package com.ruoyi;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 
 /**
  * 启动程序
  * 
  * @author ruoyi
  */
+//添加了一个扫描system下面的domain
+@ConfigurationPropertiesScan("com.ruoyi.system.domain")
 @SpringBootApplication(exclude = { DataSourceAutoConfiguration.class })
 public class RuoYiApplication
 {
